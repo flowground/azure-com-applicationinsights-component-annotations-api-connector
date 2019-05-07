@@ -1,0 +1,53 @@
+{
+    "type": "object",
+    "properties": {
+        "resourceGroupName": {
+            "required": true,
+            "type": "string"
+        },
+        "subscriptionId": {
+            "required": true,
+            "type": "string"
+        },
+        "resourceName": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "description": "Annotation associated with an application insights resource.",
+            "properties": {
+                "AnnotationName": {
+                    "description": "Name of annotation",
+                    "type": "string"
+                },
+                "Category": {
+                    "description": "Category of annotation, free form",
+                    "type": "string"
+                },
+                "EventTime": {
+                    "description": "Time when event occurred",
+                    "format": "date-time",
+                    "type": "string"
+                },
+                "Id": {
+                    "description": "Unique Id for annotation",
+                    "type": "string"
+                },
+                "Properties": {
+                    "description": "Serialized JSON object for detailed properties",
+                    "type": "string"
+                },
+                "RelatedAnnotation": {
+                    "default": "null",
+                    "description": "Related parent annotation if any",
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        },
+        "api_version": {
+            "required": true,
+            "type": "string"
+        }
+    }
+}
